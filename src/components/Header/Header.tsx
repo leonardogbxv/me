@@ -7,7 +7,7 @@ export default function Header() {
         <a href='/'>@leonardogbxv</a>
         <ul className={styles['nav-list']}>
           <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
       </nav>
     </header>
