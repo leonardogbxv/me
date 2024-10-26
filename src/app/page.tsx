@@ -1,95 +1,60 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from './page.module.css';
+import Image from 'next/image';
+import { Metadata } from 'next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+export const metadata: Metadata = {
+  title: 'Leonardo G. Batista',
+  description: 'leonardogbxv\'s portfolio & blog'
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <section className={styles.headliner}>
+        <a href="https://github.com/leonardogbxv" target="_blank">
+          <Image
+            src="https://github.com/leonardogbxv.png"
+            alt="Leonardo's GitHub Profile"
+            width={300}
+            height={300}
+          />
+        </a>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+        <p>
+          <span>Olá! Meu nome é Leonardo.&nbsp;</span>
+          <span>Sou um desenvolvedor, focado em desenvolvimento mobile.</span>
+        </p>
+
+        <p className={styles.socials}>
+          <a href="https://www.linkedin.com/in/leonardo-g-batista/" target="_blank">
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              size="2x"
             />
-            Deploy now
           </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
+
+          <a href="https://github.com/leonardogbxv" target="_blank">
+            <FontAwesomeIcon
+              icon={faGithub}
+              size="2x"
+            />
           </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+          <a href="mailto:leonardog.bat@gmail.com" target="_blank">
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              size="2x"
+            />
+          </a>
+        </p>
+      </section>
+
+      <section className={styles.wip}>
+        <h3>🚧 Em Contrução 🚧</h3>
+      </section>
+    </>
   );
 }
