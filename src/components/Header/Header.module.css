@@ -10,16 +10,6 @@
   font-size: 20px;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 80ms ease-out 10ms;
-}
-
-.navbar a:hover {
-  color: #ff1259;
-}
-
 .nav-list {
   display: flex;
   list-style: none;
@@ -27,4 +17,5 @@
 
 .nav-list li {
   margin-left: 30px;
+  font-weight: normal;
 }
