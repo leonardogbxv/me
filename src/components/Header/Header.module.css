@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 20px;
+  font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
 }
 
@@ -19,4 +19,8 @@
 .nav-list li {
   margin-left: 30px;
   font-weight: normal;
+}
+
+.spaced {
+  letter-spacing: 1px;
 }
