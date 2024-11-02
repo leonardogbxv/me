@@ -1,13 +1,13 @@
 import styles from './Header.module.css';
+import Link from 'next/link';
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
-        <a href='/'>@leonardogbxv</a>
+        <Link href="/">@leonardogbxv</Link>
         <ul className={styles['nav-list']}>
-          <li><a href="#">About</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <li><Link href="/blog">Blog</Link></li>
         </ul>
       </nav>
     </header>
