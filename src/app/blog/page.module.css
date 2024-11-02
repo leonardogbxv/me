@@ -6,12 +6,11 @@
   margin-top: 26px;
 }
 
-.post h2 {
-  font-weight: normal;
+.post h3 {
+  font-size: var(--font-size-md)
 }
 
 .post pre {
-  margin-top: 2px;
   color: var(--color-text-secondary);
-  font-size: 16px;
+  font-size: var(--font-size-sx);
 }
