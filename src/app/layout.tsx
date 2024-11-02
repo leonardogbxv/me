@@ -1,17 +1,15 @@
 import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
-import { Montserrat } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
 config.autoAddCss = false;
 
-const montserrat = Montserrat({
-  weight: ['400', '600'],
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--main-font',
-  fallback: ['sans-serif'],
+  display: 'swap',
 });
 
 export default function RootLayout({
@@ -20,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang="pt-br" className={inter.className}>
       <body>
         <div className="container">
           <Header />
