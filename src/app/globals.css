@@ -1,8 +1,14 @@
 :root {
   --base-background: #0d0f12;
-  --color-text-primary: #e3e6e8;
+  --color-text-primary: #f3f3f3;
   --color-text-secondary: #7e8c9a;
   --color-text-highlight: #63bbf6;
+  --font-size-xs: 12px;
+  --font-size-sx: 16px;
+  --font-size-sm: 18px;
+  --font-size-md: 24px;
+  --font-size-lg: 32px;
+  --font-size-xl: 64px;
 }
 
 * {
@@ -17,28 +23,16 @@ body {
   line-height: 1.45;
 }
 
-h1 {
-  font-size: 30px;
-  color: var(--color-text-highlight);
-}
-
-h2 {
-  font-size: 23px;
-}
-
-h3 {
-  font-size: 18px;
-}
-
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 80ms ease-out 10ms;
+  transition: color 100ms ease-out 10ms;
 }
 
 a:hover {
   color: var(--color-text-highlight);
 }
+
 .container {
   max-width: 900px;
   margin: 0 auto;
