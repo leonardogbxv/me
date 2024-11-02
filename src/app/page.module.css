@@ -19,7 +19,7 @@
 }
 
 .headliner p span {
-  font-size: 23px;
+  font-size: var(--font-size-md);
   color: var(--color-text-secondary);
 }
 
@@ -37,7 +37,7 @@
 .socials a {
   text-decoration: none;
   color: inherit;
-  transition: color 80ms ease-out 10ms;
+  transition: color 100ms ease-out 10ms;
 }
 
 .headliner a:hover {
@@ -45,11 +45,11 @@
 }
 
 .wip {
-  margin: 100px 0;
+  margin: 50px 0;
 }
 
 .wip h3 {
-  font-size: 23px;
+  font-size: var(--font-size-md);
   text-align: center;
   color: var(--color-text-primary);
 }
