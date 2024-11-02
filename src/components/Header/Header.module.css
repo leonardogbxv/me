@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
+  color: var(--color-text-secondary);
 }
 
 .nav-list {
