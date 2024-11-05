@@ -7,9 +7,9 @@ export default async function Blog() {
   const posts = await getPosts();
 
   return (
-    <section className={styles.blog}>
+    <section>
       {posts.map((post) => (
-        <article key={post.slug} className={styles.post}>
+        <article key={post.slug} className={styles['post-item']}>
           <Link href={`/blog/${post.slug}`}>
             <h3>{post.metadata.title}</h3>
           </Link>
