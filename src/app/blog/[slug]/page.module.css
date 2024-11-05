@@ -1,0 +1,17 @@
+.post header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 30px;
+}
+
+.post h1 {
+  font-size: var(--font-size-xl);
+  line-height: var(--font-size-xl);
+}
+
+.post pre {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-size-sm);
+}
