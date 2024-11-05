@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import { MdxComponents } from '@/components/MdxComponents';
 
 interface PostMetadata {
   title: string;
@@ -17,7 +18,8 @@ export async function getPostBySlug(slug: string) {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { frontmatter, content } = await compileMDX<PostMetadata>({
     source: fileContent,
-    options: { parseFrontmatter: true }
+    options: { parseFrontmatter: true },
+    components: MdxComponents,
   });
 
   return {
