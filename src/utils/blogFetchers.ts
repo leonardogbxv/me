@@ -7,6 +7,7 @@ interface PostMetadata {
   title: string;
   publish_date: string;
   author: string;
+  description: string;
   tags: string[];
 }
 
