@@ -7,7 +7,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Leonardo Gomes Batista',
+  title: 'Leonardo Gomes',
   description: 'leonardogbxv\'s portfolio & blog'
 };
 
