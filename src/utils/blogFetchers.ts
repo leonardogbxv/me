@@ -1,7 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
-import { MdxComponents } from '@/components/MdxComponents';
+import remarkGfm from 'remark-gfm';
+import rehypePrettyCode from 'rehype-pretty-code';
+import MdxComponents from '@/components/MdxComponents';
+import mdxMermaid from 'mdx-mermaid';
 
 interface PostMetadata {
   title: string;
@@ -19,7 +22,15 @@ export async function getPostBySlug(slug: string) {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { frontmatter, content } = await compileMDX<PostMetadata>({
     source: fileContent,
-    options: { parseFrontmatter: true },
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm, [mdxMermaid, {output: 'svg' }]],
+        rehypePlugins: [[rehypePrettyCode, {
+          theme: 'dracula',
+        }]]
+      }
+    },
     components: MdxComponents,
   });
 
