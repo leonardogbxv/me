@@ -1,13 +1,16 @@
 :root {
   --base-background: #0d0f12;
+  --background-secondary: #282a36;
+  --foreground: #F8F8F2;
   --color-text-primary: #f3f3f3;
   --color-text-secondary: #7e8c9a;
   --color-text-highlight: #63bbf6;
+  --interactive-accent: #50fa7b;
   --font-size-xs: 12px;
   --font-size-sx: 16px;
   --font-size-sm: 18px;
   --font-size-md: 24px;
-  --font-size-lg: 32px;
+  --font-size-lg: 30px;
   --font-size-xl: 64px;
 }
 
