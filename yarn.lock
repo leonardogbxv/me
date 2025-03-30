@@ -267,22 +267,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/loader@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@mdx-js/loader@npm:3.1.0"
-  dependencies:
-    "@mdx-js/mdx": "npm:^3.0.0"
-    source-map: "npm:^0.7.0"
-  peerDependencies:
-    webpack: ">=5"
-  peerDependenciesMeta:
-    webpack:
-      optional: true
-  checksum: 10c0/0f301dcc1dbc0f7aa0060fdeabf9efbc6218f3660562c4c97f273fa3e74a6259d231468a38998b4739cf3ea9bc7cf9f23d5b3deda919af2ac9c10b4580bd142c
-  languageName: node
-  linkType: hard
-
-"@mdx-js/mdx@npm:^3.0.0, @mdx-js/mdx@npm:^3.0.1":
+"@mdx-js/mdx@npm:^3.0.1":
   version: 3.1.0
   resolution: "@mdx-js/mdx@npm:3.1.0"
   dependencies:
@@ -314,7 +299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^3.0.1, @mdx-js/react@npm:^3.1.0":
+"@mdx-js/react@npm:^3.0.1":
   version: 3.1.0
   resolution: "@mdx-js/react@npm:3.1.0"
   dependencies:
@@ -348,23 +333,6 @@ __metadata:
   dependencies:
     glob: "npm:10.3.10"
   checksum: 10c0/54dd8cd8fd47722528ffb7862a8e079bbc07d9131125502273ec88a706238d7a7d2e4abf3ba72ee2a21ea2890de53bf6dfec0308ddf9cfc7794a4b5bbc5d06cc
-  languageName: node
-  linkType: hard
-
-"@next/mdx@npm:^15.0.2":
-  version: 15.0.2
-  resolution: "@next/mdx@npm:15.0.2"
-  dependencies:
-    source-map: "npm:^0.7.0"
-  peerDependencies:
-    "@mdx-js/loader": ">=0.15.0"
-    "@mdx-js/react": ">=0.15.0"
-  peerDependenciesMeta:
-    "@mdx-js/loader":
-      optional: true
-    "@mdx-js/react":
-      optional: true
-  checksum: 10c0/a0a102f6c3e3e2afd4b4b5a4f464d58be11da9cd1a08821bfd708a0d0b60b26126bbc9b6230c2927aeea16ad237e50db36ed5e4dc2d7888726bd3d9c9618ae4c
   languageName: node
   linkType: hard
 
@@ -4318,9 +4286,6 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": "npm:^6.6.0"
     "@fortawesome/react-fontawesome": "npm:^0.2.2"
     "@giscus/react": "npm:^3.0.0"
-    "@mdx-js/loader": "npm:^3.1.0"
-    "@mdx-js/react": "npm:^3.1.0"
-    "@next/mdx": "npm:^15.0.2"
     "@types/mdx": "npm:^2.0.13"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
