@@ -7,7 +7,8 @@ const BlockQuote: React.FC<BlockQuoteProps> = ({ children, ...props }) => {
     <blockquote
       style={{
         borderLeft: '4px solid var(--interactive-accent)',
-        padding: '0 22px'
+        padding: '0 22px',
+        color: '#bababa',
       }}
       {...props}
     >
