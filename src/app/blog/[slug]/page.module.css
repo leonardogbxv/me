@@ -10,8 +10,53 @@
   line-height: var(--font-size-xl);
 }
 
-.post pre {
+.post pre > time {
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
   line-height: var(--font-size-sm);
+}
+
+.post ul {
+  list-style-position: inside;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  margin-block: 22px;
+  line-height: var(--font-size-lg);
+}
+
+.post figure > pre {
+  border-radius: 5px;
+}
+
+.post pre > code {
+  padding: 20px;
+  line-height: normal;
+  font-size: var(--font-size-sx);
+  margin-block: 22px;
+  line-height: var(--font-size-md);
+  border-radius: 5px;
+}
+
+.post table {
+  border-spacing: 0;
+  margin-block: 22px;
+}
+
+.post thead tr th {
+  border-bottom: 4px solid var(--background-secondary);
+}
+
+.post th {
+  border: 1px solid var(--background-secondary);
+  padding: 10px;
+}
+
+.post td {
+  border: 1px solid var(--background-secondary);
+  padding: 10px;
+}
+
+.post code:not(pre > code) {
+  background-color: var(--background-secondary);
+  color: var(--foreground);
 }
