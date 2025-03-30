@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
-import rehypePrettyCode from 'rehype-pretty-code';
+import rehypePrettyCode, { Options } from 'rehype-pretty-code';
+import mdxMermaid, { mdxmermaid } from 'mdx-mermaid';
 import MdxComponents from '@/components/MdxComponents';
-import mdxMermaid from 'mdx-mermaid';
 
 interface PostMetadata {
   title: string;
@@ -13,6 +13,17 @@ interface PostMetadata {
   description: string;
   tags: string[];
 }
+
+const rehypePrettyCodeOptions: Options = {
+  theme: 'dracula',
+};
+
+const mermaidConfig: mdxmermaid.Config = {
+  output: 'svg',
+  mermaid: {
+    theme: 'dark',
+  },
+};
 
 const contentDir = path.join(process.cwd(), 'src/posts');
 
@@ -25,10 +36,8 @@ export async function getPostBySlug(slug: string) {
     options: {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGfm, [mdxMermaid, {output: 'svg' }]],
-        rehypePlugins: [[rehypePrettyCode, {
-          theme: 'dracula',
-        }]]
+        remarkPlugins: [remarkGfm, [mdxMermaid, mermaidConfig]],
+        rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]]
       }
     },
     components: MdxComponents,
