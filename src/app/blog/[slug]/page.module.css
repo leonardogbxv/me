@@ -29,11 +29,9 @@
 }
 
 .post pre > code {
-  padding: 20px;
-  line-height: normal;
-  font-size: var(--font-size-sx);
+  padding: 10px;
+  font-size: 14px;
   margin-block: 22px;
-  line-height: var(--font-size-md);
   border-radius: 5px;
 }
 
@@ -60,4 +58,6 @@
 .post code:not(pre > code) {
   background-color: var(--background-secondary);
   color: var(--foreground);
+  padding: 4px;
+  border-radius: 5px;
 }
