@@ -4302,6 +4302,7 @@ __metadata:
     remark-gfm: "npm:^4.0.1"
     shiki: "npm:^3.2.1"
     typescript: "npm:^5"
+    unist-util-visit: "npm:^5.0.0"
   languageName: unknown
   linkType: soft
 
