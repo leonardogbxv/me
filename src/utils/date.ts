@@ -1,10 +1,10 @@
-export function formatISODateToLocaleString(isoDate: string) {
-  const date = new Date(isoDate);
-  const locale: Intl.LocalesArgument = 'pt-BR';
+import { DateArg, format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
-  const options: Intl.DateTimeFormatOptions = { month: 'long', day: '2-digit' };
-  const dayMonth = date.toLocaleDateString(locale, options);
-  const year = date.getFullYear();
+export function formatDate(date: DateArg<Date> & {}, formatStr: string) {
+  const formattedDate = format(date, formatStr, {
+    locale: ptBR,
+  });
 
-  return `${dayMonth}, ${year}`;
+  return formattedDate;
 }
