@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getPosts } from '@/utils/blogFetchers';
-import { formatISODateToLocaleString } from '@/utils/date';
+import { formatDate } from '@/utils/date';
 import styles from './page.module.css';
 
 export default async function Blog() {
@@ -14,7 +14,7 @@ export default async function Blog() {
             <h3>{post.metadata.title}</h3>
           </Link>
           <pre>
-            <time>{formatISODateToLocaleString(post.metadata.publish_date)}</time>
+            <time>{formatDate(new Date(post.metadata.publish_date), 'd \'de\' MMMM, yyyy')}</time>
           </pre>
         </article>
       ))}

@@ -1,8 +1,8 @@
-import { formatISODateToLocaleString } from '@/utils/date';
+import { formatDate } from '@/utils/date';
 import { getPostBySlug, getSlugs } from '@/utils/blogFetchers';
-import styles from './page.module.css';
 import { Metadata } from 'next';
 import Comments from '@/components/Comments/Comments';
+import styles from './page.module.css';
 
 type BlogPostParams = {
   params: { slug: string };
@@ -31,7 +31,7 @@ export default async function BlogPost({ params }: BlogPostParams) {
       <header>
         <h1>{post.metadata.title}</h1>
         <pre>
-          <time>{formatISODateToLocaleString(post.metadata.publish_date)}</time>
+          <time>{formatDate(new Date(post.metadata.publish_date), 'd \'de\' MMMM, yyyy')}</time>
         </pre>
       </header>
 
