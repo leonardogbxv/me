@@ -49,9 +49,9 @@ export async function getPosts() {
     files.map((file) => getPostBySlug(path.parse(file).name))
   );
 
-  posts.sort((a, b) => 
+  posts.sort((a, b) => (
     new Date(b.metadata.publish_date).getTime() - new Date(a.metadata.publish_date).getTime()
-  );  
+  ));  
 
   return posts;
 }
