@@ -1,12 +1,10 @@
-import styles from './page.module.css';
+import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
 import { getPosts } from '@/utils/blogFetchers';
-import { formatDate } from '@/utils/date';
+import Article from '@/components/Article/Article';
+import SocialMedia from '@/components/SocialMedia/SocialMedia';
+import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'Leonardo Gomes',
@@ -33,50 +31,24 @@ export default async function Home() {
           <span>Sou um desenvolvedor mobile apaixonado por tecnologia.</span>
         </p>
 
-        <p className={styles.socials}>
-          <Link href="https://www.linkedin.com/in/leonardo-g-batista/" target="_blank">
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              size="2x"
-            />
-          </Link>
-
-          <Link href="https://github.com/leonardogbxv" target="_blank">
-            <FontAwesomeIcon
-              icon={faGithub}
-              size="2x"
-            />
-          </Link>
-
-          <Link href="mailto:leonardog.bat@gmail.com" target="_blank">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              size="2x"
-            />
-          </Link>
-        </p>
+        <SocialMedia />
       </section>
 
-      <section className={styles.blog}>
+      <section>
         <header>
-          <h1>
-            <Link href="/blog">Artigos recentes</Link>
-          </h1>
+          <h3>
+            <Link href="/blog">ARTIGOS RECENTES</Link>
+          </h3>
         </header>
 
         <div className={styles.articles}>
           {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <article className={styles['article-card']}>
-                <header>
-                  <h2>{post.metadata.title}</h2>
-                </header>
-                <p>{post.metadata.description}</p>
-                <time dateTime={post.metadata.publish_date}>
-                  {formatDate(new Date(post.metadata.publish_date), 'dd/MM/yyyy')}
-                </time>
-              </article>
-            </Link>
+            <Article
+              key={post.slug}
+              title={post.metadata.title}
+              date={post.metadata.publish_date}
+              href={`/blog/${post.slug}`}
+            />
           ))}
         </div>
       </section>

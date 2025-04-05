@@ -1,0 +1,12 @@
+.post-item {
+  margin-top: 26px;
+}
+
+.post-item h3 {
+  font-size: var(--font-size-md)
+}
+
+.post-item pre {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sx);
+}

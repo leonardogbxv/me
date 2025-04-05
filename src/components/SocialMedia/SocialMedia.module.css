@@ -1,0 +1,11 @@
+.socials {
+  display: flex;
+  gap: 20px;
+  margin: 15px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 100ms ease-out 10ms;
+}
