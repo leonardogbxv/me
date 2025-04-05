@@ -61,3 +61,11 @@
   padding: 4px;
   border-radius: 5px;
 }
+
+.post a {
+  transition: font-weight 50ms ease-out 10ms;
+}
+
+.post a:hover {
+  font-weight: bold;
+}
