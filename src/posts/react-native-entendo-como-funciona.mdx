@@ -5,15 +5,15 @@ publish_date: "2025-03-29"
 author: "Leonardo Gomes"
 ---
 
-O React Native já faz parte do meu dia-a-dia há alguns anos, foi com ele que pude ter um primeiro contato com o mundo de desenvolvimento mobile.
+O React Native já faz parte do meu dia-a-dia há alguns anos, foi com ele que pude ter um primeiro contato com o mundo de desenvolvimento mobile. 
 
-Hoje, quero compartilhar um pouco sobre como o React Native funciona e como ele torna possível o desenvolvimento de aplicativos para Android e iOS.
+Hoje quero compartilhar um pouco sobre como o React Native funciona e como ele torna possível o desenvolvimento de aplicativos para Android e iOS.
 ## Estrutura
 **“O React Native permite que os desenvolvedores que conhecem React criem aplicativos nativos.”** É assim que somos inicialmente apresentados a esse framework em umas das primeiras páginas da doc oficial: [Get Started with React Native](https://reactnative.dev/docs/environment-setup).
 
 Muitas vezes, essa apresentação inicial do React Native como um framework para criar aplicativos nativos pode parecer confusa, pois ele na verdade **não gera nenhum código nativo**.
 
-Pelo menos não diretamente, como faria um app escrito em Swift (iOS) ou Kotlin (Android). Em vez disso, ele usa uma ponte, a **Bridge**, para o código JavaScript conseguir se comunicar com as APIs e componentes nativos. 
+Pelo menos não diretamente... como faria um app escrito em Swift (iOS) ou Kotlin (Android). Em vez disso, ele usa uma ponte, a **Bridge**, para o código JavaScript conseguir se comunicar com as APIs e componentes nativos. 
 
 Isso se torna mais claro ao compararmos com outros frameworks, como o Cordova e Ionic que rodam parte da interface do app em cima de uma WebView.
 
@@ -28,9 +28,9 @@ Diferente deles, o React Native realmente utiliza elementos nativos para a inter
 | `<Image>`    | `<ImageView>` | `<UIImageView>` | `<img>` |
 
 ## Construindo interfaces
-No React Native, **tudo é baseado em views**! Bem... digo, a construção da interface do usuário é toda baseada em views.
+No React Native, **tudo é baseado em views**! Bem... digo, a construção da interface do usuário é toda baseada em views. 🎨
 
-Uma **view** é um bloco de UI usado para compor a tela, seja uma imagem, um texto ou um botão, todos são tipos de views.
+> Uma **view** é um bloco de UI usado para compor a tela, seja uma imagem, um texto ou um botão, todos são tipos de views.
 
 Em desenvolvimento nativo, as views são escritas usando **Kotlin**/**Java** no Android e **Swift**/**Objective-C** no iOS. Já no React Native, essas views são criadas com **JSX** e, durante a execução, esses componentes React são convertidos para os equivalentes nativos no Android e no iOS.
 
@@ -55,9 +55,9 @@ const App = () => {
 export default App;
 ```
 
-Para entender um pouco mais de React, recomendo ler essa seção sobre [Fundamentos do React](https://reactnative.dev/docs/intro-react) lá na doc oficial. Ela oferece uma boa introdução ao React no contexto do React Native.
+Se quiser entender um pouco mais sobre o uso do React no React Native, recomendo ler essa seção sobre [Fundamentos do React](https://reactnative.dev/docs/intro-react) lá na doc oficial.
 ## Arquitetura
-Ali no começo eu falei brevemente sobre a **Bridge**, a primeira arquitetura do React Native. "Primeira", pois uma segunda e **nova arquitetura** vem sendo desenvolvida desde 2018 pelo time do React Native.
+Ali no começo eu falei brevemente sobre a **Bridge**, a primeira arquitetura do React Native. "Primeira", pois uma segunda e **nova arquitetura** já vem sendo desenvolvida desde 2018 pelo time do React Native.
 
 > [React Native's New Architecture - Parashuram N - React Conf 2018](https://www.youtube.com/watch?v=UcqRXTriUVI)
 
@@ -82,15 +82,17 @@ flowchart TD
 
 Imagine o seguinte cenário:
 
-- App com uma grande quantidade de dados para mostrar na tela;
-- Diversos eventos;
-- Múltiplas atualizações de estado em resposta desses eventos ocorrendo.
+1. App com uma grande quantidade de dados para mostrar na tela.
+2. Diversos eventos.
+3. Múltiplas atualizações de estado em resposta desses eventos ocorrendo.
 
-Em uma situação assim, a Bridge ira ficar sobrecarregada... um **gargalo** surge! Todo esse processo das trocas de mensagens JSON, serialização e desserialização dos dados irão gerar um "lag" na aplicação, fazendo aparecer, por exemplo, *flashes* de tela branca e *delays* na renderização de alguns itens durante esses processos.
+Em uma situação assim, a Bridge ira ficar sobrecarregada... 💣
+
+Todo esse processo das trocas de mensagens JSON, serialização e desserialização dos dados irão gerar um "lag" na aplicação, fazendo aparecer, por exemplo, *flashes* de tela branca e *delays* na renderização de alguns itens durante esses processos.
 
 <div style={{ textAlign: 'center', fontSize: 'var(--font-size-lg)' }}>🫠 . . .</div>
 
-Para resolver isso, a **nova arquitetura** aparece!
+Para resolver isso, surge a **nova arquitetura**! 🎉
 
 Nela, a Bridge é substituída pelo **Fabric**, um novo sistema de renderização do React Native que permite criar e manipular views diretamente na thread nativa, de forma mais eficiente.
 
@@ -119,11 +121,8 @@ A nova arquitetura ficou por um bom tempo como *experimental*, mas já passou a 
 
 Há um grande esforço do time da Meta em melhorar documentações e suporte a nova arquitetura. Afinal, querem garantir que a comunidade e inúmeras bibliotecas façam a migração para a nova arquitetura.
 
-Esse é o futuro do framework.
 ## Finalizando
-É isso! Esta foi uma visão mais superficial sobre o funcionamento do React Native. Não cheguei a me aprofundar muito em alguns conceitos... era pra ser uma leitura mais rápida.
-
-Mas pretendo escrever mais sobre em breve.
+É isso! Isso foi uma breve visão sobre o funcionamento do React Native.
 
 Valeu! 😁
 ## Referências
