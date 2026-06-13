@@ -1,16 +1,11 @@
 'use client';
-import dynamic from 'next/dynamic';
 import type { MermaidProps } from 'mdx-mermaid/lib/Mermaid';
-
-const DynamicMermaid = dynamic(
-  () => import('mdx-mermaid/lib/Mermaid').then((res) => res.Mermaid),
-  { ssr: false },
-);
+import { Mermaid } from 'mdx-mermaid/lib/Mermaid';
 
 const MdxMermaid: React.FC<MermaidProps> = ({ ...props }) => {
   return (
     <div style={{ textAlign: 'center' }}>
-      <DynamicMermaid
+      <Mermaid
         config={{
           theme: {
             light: 'dark',
