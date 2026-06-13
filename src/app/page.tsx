@@ -8,7 +8,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'Leonardo Gomes',
-  description: 'leonardogbxv\'s portfolio & blog'
+  description: 'leonardogbxv\'s portfolio & blog',
 };
 
 export default async function Home() {
@@ -23,6 +23,7 @@ export default async function Home() {
             alt="Leonardo's GitHub Profile"
             width={300}
             height={300}
+            loading="eager"
           />
         </Link>
 
